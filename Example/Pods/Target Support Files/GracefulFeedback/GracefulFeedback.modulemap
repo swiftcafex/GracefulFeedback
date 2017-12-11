@@ -1,0 +1,6 @@
+framework module GracefulFeedback {
+  umbrella header "GracefulFeedback-umbrella.h"
+
+  export *
+  module * { export * }
+}
