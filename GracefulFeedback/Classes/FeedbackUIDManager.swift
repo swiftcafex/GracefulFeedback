@@ -9,31 +9,45 @@
 import UIKit
 //import
 
-class FeedbackUIDManager: NSObject {
+public class FeedbackUIDManager: NSObject {
 
-    static let sharedInstance = FeedbackUIDManager()
+    public static let sharedInstance = FeedbackUIDManager()
     
     var uid: String?
+    
+    let userDefault = UserDefaults(suiteName: "org.swiftcafe.feedback")
     
     override init() {
         
         super.init()
-        self.uid = UserDefaults.standard.string(forKey: "feedback_uid")
+        
+        // fetch UID from user default system first.
+        self.uid = userDefault?.string(forKey: "feedback_uid")
         
     }
     
-    func getUID(callback: @escaping (String) -> Void) {
+    public func getUID(callback: @escaping (String) -> Void) {
         
         if let uid = self.uid {
             
-            //如果本地已经存在
-            print("uid cached: \(uid)")
+            // if UID has already fetched.
             callback(uid)
             return
             
         }
         
-        let url = FeedbackURLManager.requestUserID()
+        let urlString = FeedbackURLManager.requestUserID()
+        
+        if let url = URL(string: urlString) {
+        
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+              
+                print("result")
+                
+            })
+            
+        }
+        
 //        Just.get(url) { (result) in
 //         
 //            DispatchQueue.main.async {

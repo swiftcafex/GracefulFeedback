@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102DBF151FDE9F18001B1F30 /* TestFeedBackUIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102DBF141FDE9F18001B1F30 /* TestFeedBackUIDManager.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,7 +30,10 @@
 
 /* Begin PBXFileReference section */
 		0A5D4B70ECA92C0FF176F959 /* Pods_GracefulFeedback_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GracefulFeedback_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		33C9B3F36FB42B325A176F6E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		102DBF141FDE9F18001B1F30 /* TestFeedBackUIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFeedBackUIDManager.swift; sourceTree = "<group>"; };
+		102DBF171FDE9FC5001B1F30 /* GracefulFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GracefulFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		102DBF1B1FDEA24C001B1F30 /* GracefulFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GracefulFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C9B3F36FB42B325A176F6E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GracefulFeedback_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GracefulFeedback_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,12 +44,12 @@
 		607FACE51AFB9204008FA782 /* GracefulFeedback_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GracefulFeedback_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		71DCEAE88C03187D03AB94BA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		71DCEAE88C03187D03AB94BA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B1667D6E7F584CB71EB05EA6 /* Pods-GracefulFeedback_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GracefulFeedback_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GracefulFeedback_Example/Pods-GracefulFeedback_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3B748037519B9FBBDC5DBA /* Pods_GracefulFeedback_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GracefulFeedback_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE542A0713E7BDC5275AF928 /* Pods-GracefulFeedback_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GracefulFeedback_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GracefulFeedback_Tests/Pods-GracefulFeedback_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8793E9116CE174CC2A7AF40 /* Pods-GracefulFeedback_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GracefulFeedback_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GracefulFeedback_Tests/Pods-GracefulFeedback_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EAC9B162B3009767033BB028 /* GracefulFeedback.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GracefulFeedback.podspec; path = ../GracefulFeedback.podspec; sourceTree = "<group>"; };
+		EAC9B162B3009767033BB028 /* GracefulFeedback.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GracefulFeedback.podspec; path = ../GracefulFeedback.podspec; sourceTree = "<group>"; };
 		EB0ADD6A4A639CE56B7A9648 /* Pods-GracefulFeedback_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GracefulFeedback_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GracefulFeedback_Example/Pods-GracefulFeedback_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +76,8 @@
 		181159D6EE0401DB191D46F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				102DBF1B1FDEA24C001B1F30 /* GracefulFeedback.framework */,
+				102DBF171FDE9FC5001B1F30 /* GracefulFeedback.framework */,
 				0A5D4B70ECA92C0FF176F959 /* Pods_GracefulFeedback_Example.framework */,
 				CA3B748037519B9FBBDC5DBA /* Pods_GracefulFeedback_Tests.framework */,
 			);
@@ -124,6 +130,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				102DBF141FDE9F18001B1F30 /* TestFeedBackUIDManager.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -215,10 +222,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = V245VEZV34;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = V245VEZV34;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -272,10 +281,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GracefulFeedback_Example/Pods-GracefulFeedback_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GracefulFeedback/GracefulFeedback.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GracefulFeedback.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -389,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				102DBF151FDE9F18001B1F30 /* TestFeedBackUIDManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +538,7 @@
 			baseConfigurationReference = B1667D6E7F584CB71EB05EA6 /* Pods-GracefulFeedback_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V245VEZV34;
 				INFOPLIST_FILE = GracefulFeedback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -541,6 +554,7 @@
 			baseConfigurationReference = EB0ADD6A4A639CE56B7A9648 /* Pods-GracefulFeedback_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V245VEZV34;
 				INFOPLIST_FILE = GracefulFeedback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -555,6 +569,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE542A0713E7BDC5275AF928 /* Pods-GracefulFeedback_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = V245VEZV34;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -576,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8793E9116CE174CC2A7AF40 /* Pods-GracefulFeedback_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = V245VEZV34;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

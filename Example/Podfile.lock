@@ -4,7 +4,8 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - GracefulFeedback (0.1.0)
+  - GracefulFeedback (0.1.0):
+    - UIColor_Hex_Swift
   - Nimble (7.0.2)
   - Nimble-Snapshots (6.3.0):
     - Nimble-Snapshots/Core (= 6.3.0)
@@ -12,6 +13,7 @@ PODS:
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
+  - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -26,10 +28,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  GracefulFeedback: 82c19da5a813fccf58801f15947a7394c9fbb53a
+  GracefulFeedback: ca5cacd17c34909e1e2254edbab7c1d61c5d41ca
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
 PODFILE CHECKSUM: f42ac8b8e9e6a6adacbf570dd4710b06f5b6b87c
 
