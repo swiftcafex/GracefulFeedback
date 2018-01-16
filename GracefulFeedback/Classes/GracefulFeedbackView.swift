@@ -19,10 +19,14 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
     
     var chatList: [ChatItem]?
     
-    public override init(frame: CGRect) {
+    var feedbackProvider : GracefulFeedbackProvider?
+    
+    public init(frame: CGRect, provider: GracefulFeedbackProvider) {
         
         super.init(frame: frame)
      
+        self.feedbackProvider = provider
+        
         let tableView = UITableView(frame: CGRect.zero)
         tableView.delegate = self
         tableView.dataSource = self
@@ -77,42 +81,48 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
     }
     
     // MARK: Utils
-    
     func loadData() {
         
-        ChatItem.getItems { (items) in
+        self.feedbackProvider?.getUID { uid in
             
-            DispatchQueue.main.async {
+            self.feedbackProvider?.getItems?(uid) { items in
                 
-                self.connectView?.isHidden = true
-                self.chatList = items
-                self.chatTableView?.reloadData()
+                DispatchQueue.main.async {
+                    
+                    self.connectView?.isHidden = true
+                    self.chatList = items
+                    self.chatTableView?.reloadData()
+                    
+                }
                 
             }
             
         }
-        
+
     }
-    
     
     func sendFeedBack() {
         
-        let url = FeedbackURLManager.addFeedBack()
-        
         FeedbackUIDManager.sharedInstance.getUID { (uid) in
             
-            if uid.characters.count > 0 {
+            if uid.count > 0 {
                 
                 if let content = self.chatView?.textView?.text {
                     
                     self.chatView?.textView?.text = ""
+                    
+                    self.feedbackProvider?.sendFeedback?(uid, content ) {
+                        
+                        self.loadData()
+                        
+                    }
                     
                     
 //                    Just.post(url, data: ["userID":uid, "content": content, "deviceInfo" : UIDevice.current.platformString()], asyncCompletionHandler: { (result) in
 //
 //                        DispatchQueue.main.async {
 //
-//                            self.loadDate()
+//                    
 //
 //                        }
 //
@@ -175,55 +185,7 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
         return true
         
     }
-    
-    // MARK: UITableView Delegate
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.chatList?.count ?? 0
-        
-    }
-    
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
-        
-    }
-    
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if let chatItem = self.chatList?[indexPath.row] {
-            
-            if let content = chatItem.content {
-                
-                return ChatTableViewCell.calcRowHeight(forText: content)
-                
-            }
-            
-        }
-        
-        return ChatTableViewCell.minHeight
-        
-        
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        if let chatCell = cell as? ChatTableViewCell {
-            
-            if let chatItem = self.chatList?[indexPath.row] {
-                
-                chatCell.bindChatItem(chatItem: chatItem)
-                
-            }
-            
-        }
-        
-        return cell
-        
-    }
-    
+  
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         self.chatView?.textView?.resignFirstResponder()

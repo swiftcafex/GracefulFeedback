@@ -9,13 +9,17 @@
 import UIKit
 //import Just
 
-struct ChatItem {
+public struct ChatItem {
 
-    var userID: String?
-    var content: String?
-    var contentType: Int?
-    var pubDate: Date?
-    var deviceInfo: String?
+    public var userID: String?
+    public var content: String?
+    public var contentType: Int?
+    public var pubDate: Date?
+    public var deviceInfo: String?
+    
+    public init() {
+        
+    }
     
     static func getItems(callback: @escaping ([ChatItem]) -> Void) {
         
