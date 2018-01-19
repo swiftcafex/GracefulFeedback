@@ -49,12 +49,13 @@ class ChatTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = UIColor.clear
         
-        let photoView = UIImageView(image: UIImage(named: "ic_qimage"))
+        let photoView = UIImageView(image: ImageLoader.image(named: "ic_qimage"))
         self.addSubview(photoView)
         self.photoView = photoView
         
         let messageView = UIImageView()
-        messageView.image = UIImage(named:"chat_msg_bg")?.stretchableImage(withLeftCapWidth: 5, topCapHeight: 5)
+        
+        messageView.image = ImageLoader.image(named: "chat_msg_bg")?.stretchableImage(withLeftCapWidth: 5, topCapHeight: 5)
         self.addSubview(messageView)
         self.messageView = messageView
         
@@ -94,14 +95,15 @@ class ChatTableViewCell: UITableViewCell {
         if self.chatItem?.contentType == 0 {
         
             //用户留言
-            self.messageView?.image = UIImage(named:"chat_msg_usr_bg")?.stretchableImage(withLeftCapWidth: 5, topCapHeight: 5)
+            
+            self.messageView?.image = ImageLoader.image(named: "chat_msg_usr_bg")?.stretchableImage(withLeftCapWidth: 5, topCapHeight: 5)
             self.photoView?.frame = CGRect(x: self.frame.size.width - 50, y: ChatTableViewCell.paddingTop + 5, width: 40, height: 40)            
             self.messageView?.frame = CGRect(x: self.photoView!.frame.origin.x - ChatTableViewCell.maxTextWidth - 10, y: ChatTableViewCell.paddingTop, width: ChatTableViewCell.maxTextWidth, height: self.frame.size.height - ChatTableViewCell.paddingBottom)
             
         }else {
             
             //管理回复
-            self.messageView?.image = UIImage(named:"chat_msg_bg")?.stretchableImage(withLeftCapWidth: 5, topCapHeight: 5)
+            self.messageView?.image = ImageLoader.image(named: "chat_msg_bg")?.stretchableImage(withLeftCapWidth: 5, topCapHeight: 5)
             self.photoView?.frame = CGRect(x: 10, y: ChatTableViewCell.paddingTop + 5, width: 40, height: 40)
             self.messageView?.frame = CGRect(x: 60, y: ChatTableViewCell.paddingTop, width: ChatTableViewCell.maxTextWidth, height: self.frame.size.height - ChatTableViewCell.paddingBottom)
             

@@ -16,6 +16,7 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
     
     var charViewHeight = CGFloat(50)
     var keyboardHeight = CGFloat(0)
+    var chatViewTextHeight = CGFloat(0)
     
     var chatList: [ChatItem]?
     
@@ -75,8 +76,16 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
             
         }
         
-        self.chatTableView?.frame = CGRect(x: 0, y: top, width: self.frame.size.width, height: self.frame.size.height - charViewHeight - bottom - top - self.keyboardHeight)
-        self.chatView?.frame = CGRect(x: 0, y: self.frame.size.height - charViewHeight - bottom - self.keyboardHeight, width: self.frame.size.width, height: charViewHeight)
+        var charTextHeight = self.charViewHeight
+        
+        if self.chatViewTextHeight > self.charViewHeight {
+            
+            charTextHeight = self.chatViewTextHeight + 10
+            
+        }
+        
+        self.chatTableView?.frame = CGRect(x: 0, y: top, width: self.frame.size.width, height: self.frame.size.height - charTextHeight - bottom - top - self.keyboardHeight)
+        self.chatView?.frame = CGRect(x: 0, y: self.frame.size.height - charTextHeight - bottom - self.keyboardHeight, width: self.frame.size.width, height: charTextHeight)
         
         self.connectView?.frame = CGRect(x: 0, y: top, width: self.frame.size.width, height: 50)
         
@@ -166,9 +175,8 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
         if let _ = self.chatView {
             
             let size = textView.sizeThatFits(CGSize(width: self.frame.size.width, height: 1000))
-            self.chatTableView?.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height - size.height - self.keyboardHeight)
-            self.chatView?.frame = CGRect(x: 0.0, y: self.frame.size.height - size.height - self.keyboardHeight, width: self.frame.size.width, height: self.keyboardHeight)
-            print("content height \(size)")
+            self.chatViewTextHeight = size.height
+            self.setNeedsLayout()
             
         }
         
@@ -178,11 +186,24 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
         
         if text == "\n" {
             
+            self.chatViewTextHeight = 0
             self.chatView?.textView?.resignFirstResponder()
             self.sendFeedBack()
             return false
         }
         return true
+        
+    }
+    
+    public func textViewDidBeginEditing(_ textView: UITextView) {
+        
+        self.chatView?.labelHint?.isHidden = true
+        
+    }
+    
+    public func textViewDidEndEditing(_ textView: UITextView) {
+        
+        self.chatView?.labelHint?.isHidden = false
         
     }
   

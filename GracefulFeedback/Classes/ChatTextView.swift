@@ -57,5 +57,5 @@ class ChatTextView: UIView {
         self.labelHint?.frame = CGRect(x: 10, y: 4, width: self.frame.size.width - 10, height: self.frame.size.height - 8)
         
     }
-
+   
 }

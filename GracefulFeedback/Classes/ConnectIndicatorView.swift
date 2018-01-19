@@ -24,7 +24,7 @@ class ConnectIndicatorView: UIView {
         
         let connectText = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         connectText.text = NSLocalizedString("feedback.connect", comment: "")
-        connectText.text = "Connecting..."
+        connectText.text = "正在连接..."
         connectText.font = UIFont.systemFont(ofSize: 14)
         connectText.textColor = UIColor.darkGray
         self.addSubview(connectText)
