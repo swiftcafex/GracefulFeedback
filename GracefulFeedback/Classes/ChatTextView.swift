@@ -19,7 +19,7 @@ class ChatTextView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)                
         
-        let bgImage = UIImageView(image: UIImage(named: "chat_text_bg")?.stretchableImage(withLeftCapWidth: 20, topCapHeight: 20))
+        let bgImage = UIImageView(image: ImageLoader.image(named: "chat_text_bg")?.stretchableImage(withLeftCapWidth: 20, topCapHeight: 20))
         self.bgView = bgImage
         self.addSubview(bgImage)
         

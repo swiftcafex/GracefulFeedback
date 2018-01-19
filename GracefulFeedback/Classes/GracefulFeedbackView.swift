@@ -21,10 +21,12 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
     
     var feedbackProvider : GracefulFeedbackProvider?
     
+    
     public init(frame: CGRect, provider: GracefulFeedbackProvider) {
         
         super.init(frame: frame)
      
+        self.backgroundColor = UIColor("#ebebeb")
         self.feedbackProvider = provider
         
         let tableView = UITableView(frame: CGRect.zero)
@@ -73,8 +75,8 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
             
         }
         
-        self.chatTableView?.frame = CGRect(x: 0, y: top, width: self.frame.size.width, height: self.frame.size.height - charViewHeight - bottom - top)
-        self.chatView?.frame = CGRect(x: 0, y: self.frame.size.height - charViewHeight - bottom, width: self.frame.size.width, height: charViewHeight)
+        self.chatTableView?.frame = CGRect(x: 0, y: top, width: self.frame.size.width, height: self.frame.size.height - charViewHeight - bottom - top - self.keyboardHeight)
+        self.chatView?.frame = CGRect(x: 0, y: self.frame.size.height - charViewHeight - bottom - self.keyboardHeight, width: self.frame.size.width, height: charViewHeight)
         
         self.connectView?.frame = CGRect(x: 0, y: top, width: self.frame.size.width, height: 50)
         
@@ -145,8 +147,7 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
             let keyboardRect = val.cgRectValue
             let keyboardHeight = keyboardRect.height
             self.keyboardHeight = keyboardHeight
-            self.chatTableView?.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height - charViewHeight - keyboardHeight)
-            self.chatView?.frame = CGRect(x: 0.0, y: self.frame.size.height - charViewHeight - keyboardHeight, width: self.frame.size.width, height: charViewHeight)
+            self.setNeedsLayout()
             
         }
         
@@ -155,8 +156,7 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
     @objc func keyboardHide(notification: Notification) {
         
         self.keyboardHeight = 0
-        self.chatTableView?.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height - charViewHeight)
-        self.chatView?.frame = CGRect(x: 0.0, y: self.frame.size.height - charViewHeight, width: self.frame.size.width, height: charViewHeight)
+        self.setNeedsLayout()
         
     }
     
