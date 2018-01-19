@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ImageLoader {
+public class ImageLoader {
     
     // load image from framework bundle
     static func image(named: String) -> UIImage? {

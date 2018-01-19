@@ -49,7 +49,7 @@ class ChatTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = UIColor.clear
         
-        let photoView = UIImageView(image: ImageLoader.image(named: "ic_qimage"))
+        let photoView = UIImageView(image: ImageLoader.image(named: "ic_photo"))
         self.addSubview(photoView)
         self.photoView = photoView
         
