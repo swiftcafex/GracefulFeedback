@@ -17,7 +17,6 @@
 		0A2CA8B0DD7E300ABFCF1956E6B58248 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 86705D5A526AA8A898D0A972F3442901 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BA3E9175DCB86AE4BE4A6FA3D055C0F /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F0386FE433C54CFA7AAA6DFED81FC /* ExampleMetadata.swift */; };
 		11238D192DE2038C6833B932CB453D4A /* GracefulFeedbackProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E8C5D5DAD722EE5CF33B66AA92C14 /* GracefulFeedbackProvider.swift */; };
-		15C6F30194126934685B03DB0F0C99B1 /* FeedbackUIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560A5CE5924140C9C029EB5B265341B /* FeedbackUIDManager.swift */; };
 		16409C737271C4F1D7FEEFB91E317D5A /* CwlPreconditionTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = BA1C6BA757E84B9E2F452B0AA345ADAC /* CwlPreconditionTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17C8EE7DF3F57C8F99EAF63C6E61EA99 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F064AA59A689AF00E49F54D3B3D168 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		1A3E19B9F5EEB773C3BB61CA42F8BF62 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A3D06BF7AFA9FD501209966273E31 /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -100,8 +99,6 @@
 		6F7464D42011D73C000EE0C1 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F88E35C00D66C744A93A078117879 /* ChatTableViewCell.swift */; };
 		6F7464D52011D73C000EE0C1 /* ChatTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E67510A8C3258493C9532CBF181E840 /* ChatTextView.swift */; };
 		6F7464D62011D73C000EE0C1 /* ConnectIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A38BD92424918D39867E915CE500 /* ConnectIndicatorView.swift */; };
-		6F7464D72011D73C000EE0C1 /* FeedbackUIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560A5CE5924140C9C029EB5B265341B /* FeedbackUIDManager.swift */; };
-		6F7464D82011D73C000EE0C1 /* FeedbackURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20390354FB576D29A953B459D10E14 /* FeedbackURLManager.swift */; };
 		6F7464D92011D73C000EE0C1 /* GracefulFeedbackProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E8C5D5DAD722EE5CF33B66AA92C14 /* GracefulFeedbackProvider.swift */; };
 		6F7464DA2011D73C000EE0C1 /* GracefulFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3A1FAB93D908AFF53CC5E22CCCA73 /* GracefulFeedbackView.swift */; };
 		6F7464DB2011D73C000EE0C1 /* GracefulFeedbackView+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D6899CF0AEFF83DBE6BBEE1BB22B14 /* GracefulFeedbackView+TableDelegate.swift */; };
@@ -132,7 +129,6 @@
 		91D400CC851F516E785B032662E4FDD8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2F98D2F98A0ADE3106A694CB40DC40 /* Nimble.framework */; };
 		950DADD7A0C20F63313C55E8834EB016 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D885C3713CDBE92C56D46274DDFDCA /* World+DSL.swift */; };
 		96132E7432F8DD315A88A07C6B4F9C72 /* NMBStringify.h in Headers */ = {isa = PBXBuildFile; fileRef = 67305378D22F976706C42D0CFF6805AF /* NMBStringify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9628C8F48514F4198C7D1906270BE41E /* FeedbackURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20390354FB576D29A953B459D10E14 /* FeedbackURLManager.swift */; };
 		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788D7851D10604207F2A458D7A16C2E /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		971D2F24C8D6BF4AEC13996890392453 /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351A963374848D749B8676CC27D195D /* URL+FileName.swift */; };
 		988EED125395950177DC14AF9BC87D8D /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116336FE9B0089150FE050AC029D0397 /* HaveCount.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -408,7 +404,6 @@
 		940C2B5CF8A4F26CA05F8ABFF554EC82 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		942ED51A7ABA7ADA6B3EFD6A664D7557 /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Sources/Nimble/Expectation.swift; sourceTree = "<group>"; };
 		953A7BF71695EE3E761BE6A929C365AD /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Quick.modulemap; sourceTree = "<group>"; };
-		9560A5CE5924140C9C029EB5B265341B /* FeedbackUIDManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FeedbackUIDManager.swift; path = GracefulFeedback/Classes/FeedbackUIDManager.swift; sourceTree = "<group>"; };
 		95A2A732DF2D6755F5350FD9AFB0CF8E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A1EE55783100BB3D3DF224AF543D966 /* Pods-GracefulFeedback_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GracefulFeedback_Tests.modulemap"; sourceTree = "<group>"; };
 		9A491A8EECA820BEEABE9CCFC99BF60A /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
@@ -478,7 +473,6 @@
 		DB1C4DD26DB15ADA959FFAAA7753D8E0 /* Pods-GracefulFeedback_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GracefulFeedback_Example-resources.sh"; sourceTree = "<group>"; };
 		DC4A3D06BF7AFA9FD501209966273E31 /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Nimble/DSL.swift; sourceTree = "<group>"; };
 		DCAD2C1DDAC3808E9E29DF9E84B0E48F /* XCTestObservationCenter+CurrentTestCaseTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCTestObservationCenter+CurrentTestCaseTracker.m"; sourceTree = "<group>"; };
-		DE20390354FB576D29A953B459D10E14 /* FeedbackURLManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FeedbackURLManager.swift; path = GracefulFeedback/Classes/FeedbackURLManager.swift; sourceTree = "<group>"; };
 		E2168EAB401A5BAB9CA332D4E02EBF53 /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Sources/Nimble/Matchers/MatcherFunc.swift; sourceTree = "<group>"; };
 		E33A55229105371075FF22A2BECE488F /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		E6BAC2B89D39C41E460C9E2F7801D15F /* HaveValidDynamicTypeSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveValidDynamicTypeSnapshot.swift; path = DynamicType/HaveValidDynamicTypeSnapshot.swift; sourceTree = "<group>"; };
@@ -700,8 +694,6 @@
 				792F88E35C00D66C744A93A078117879 /* ChatTableViewCell.swift */,
 				9E67510A8C3258493C9532CBF181E840 /* ChatTextView.swift */,
 				06C1A38BD92424918D39867E915CE500 /* ConnectIndicatorView.swift */,
-				9560A5CE5924140C9C029EB5B265341B /* FeedbackUIDManager.swift */,
-				DE20390354FB576D29A953B459D10E14 /* FeedbackURLManager.swift */,
 				082E8C5D5DAD722EE5CF33B66AA92C14 /* GracefulFeedbackProvider.swift */,
 				E7A3A1FAB93D908AFF53CC5E22CCCA73 /* GracefulFeedbackView.swift */,
 				07D6899CF0AEFF83DBE6BBEE1BB22B14 /* GracefulFeedbackView+TableDelegate.swift */,
@@ -1320,8 +1312,6 @@
 				6F7464DF2011E305000EE0C1 /* ImageLoader.swift in Sources */,
 				08800544B7DC84E089B4151A88F57F08 /* ChatTextView.swift in Sources */,
 				3AD02B3048B12D9EE6871099C67A2341 /* ConnectIndicatorView.swift in Sources */,
-				15C6F30194126934685B03DB0F0C99B1 /* FeedbackUIDManager.swift in Sources */,
-				9628C8F48514F4198C7D1906270BE41E /* FeedbackURLManager.swift in Sources */,
 				CE7E9BEDC7616AD1ADC68C0C857F5664 /* GracefulFeedback-dummy.m in Sources */,
 				11238D192DE2038C6833B932CB453D4A /* GracefulFeedbackProvider.swift in Sources */,
 				3AC76C87BB8F5136628CCDC0EC21B228 /* GracefulFeedbackView+TableDelegate.swift in Sources */,
@@ -1451,14 +1441,12 @@
 				6F7464DB2011D73C000EE0C1 /* GracefulFeedbackView+TableDelegate.swift in Sources */,
 				DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */,
 				A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */,
-				6F7464D82011D73C000EE0C1 /* FeedbackURLManager.swift in Sources */,
 				1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */,
 				6F7464DA2011D73C000EE0C1 /* GracefulFeedbackView.swift in Sources */,
 				094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */,
 				6F7464D92011D73C000EE0C1 /* GracefulFeedbackProvider.swift in Sources */,
 				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
 				6F7464D62011D73C000EE0C1 /* ConnectIndicatorView.swift in Sources */,
-				6F7464D72011D73C000EE0C1 /* FeedbackUIDManager.swift in Sources */,
 				6F7464D42011D73C000EE0C1 /* ChatTableViewCell.swift in Sources */,
 				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
 				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,

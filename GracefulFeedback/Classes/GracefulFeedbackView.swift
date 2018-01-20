@@ -114,7 +114,7 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
     
     func sendFeedBack() {
         
-        FeedbackUIDManager.sharedInstance.getUID { (uid) in
+        self.feedbackProvider?.getUID { uid in
             
             if uid.count > 0 {
                 
@@ -127,17 +127,6 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
                         self.loadData()
                         
                     }
-                    
-                    
-//                    Just.post(url, data: ["userID":uid, "content": content, "deviceInfo" : UIDevice.current.platformString()], asyncCompletionHandler: { (result) in
-//
-//                        DispatchQueue.main.async {
-//
-//                    
-//
-//                        }
-//
-//                    })
                     
                 }
                 

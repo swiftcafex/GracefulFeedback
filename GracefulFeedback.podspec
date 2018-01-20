@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GracefulFeedback'
-  s.version          = '0.1.0'
+  s.version          = '0.1.4'
   s.summary          = 'A feedback component provider better user experience.'
 
 # This description is used to generate tags and improve search results.
