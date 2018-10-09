@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GracefulFeedback'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A feedback component provider better user experience.'
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ A feedback component provider better user experience. greate
 
   s.resources = 'GracefulFeedback/Assets/*.png'
   s.resource_bundles = {
-    'GracefulImagePicker' => ['GracefulFeedback/Assets/*.png']
+    'GracefulFeedback' => ['GracefulFeedback/Assets/*.png']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
