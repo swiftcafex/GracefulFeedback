@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GracefulFeedback'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'A feedback component provider better user experience.'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ A feedback component provider better user experience. greate
   s.author           = { 'SwiftCafe' => 'swiftcafex@gmail.com' }
   s.source           = { :git => 'https://github.com/swiftcafex/GracefulFeedback.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-    # s.swift-version = 'Swift 4.0'
+  s.swift_version = '4.2'
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'GracefulFeedback/Classes/**/*'
