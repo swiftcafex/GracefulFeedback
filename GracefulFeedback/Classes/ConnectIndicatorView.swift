@@ -16,7 +16,7 @@ class ConnectIndicatorView: UIView {
         
         super.init(frame: frame)
         
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let indicator = UIActivityIndicatorView(style: .gray)
         indicator.startAnimating()
         self.addSubview(indicator)
         

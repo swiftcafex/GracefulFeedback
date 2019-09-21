@@ -49,8 +49,8 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
         self.connectView = connectView
         self.addSubview(connectView)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardShown(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardHide(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardShown(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         self.loadData()
         
@@ -85,6 +85,7 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
         }
         
         self.chatTableView?.frame = CGRect(x: 0, y: top, width: self.frame.size.width, height: self.frame.size.height - charTextHeight - bottom - top - self.keyboardHeight)
+                
         self.chatView?.frame = CGRect(x: 0, y: self.frame.size.height - charTextHeight - bottom - self.keyboardHeight, width: self.frame.size.width, height: charTextHeight)
         
         self.connectView?.frame = CGRect(x: 0, y: top, width: self.frame.size.width, height: 50)
@@ -139,8 +140,8 @@ public class GracefulFeedbackView: UIView, UITableViewDataSource, UITableViewDel
     @objc func keyboardShown(notification: Notification) {
         
         let userInfo = notification.userInfo
-        
-        if let val = userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+
+        if let val = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             
             let keyboardRect = val.cgRectValue
             let keyboardHeight = keyboardRect.height

@@ -43,8 +43,7 @@ class ChatTableViewCell: UITableViewCell {
     static var paddingTop: CGFloat = 15.0
     static var paddingBottom: CGFloat = 15.0
     
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {    
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = UIColor.clear

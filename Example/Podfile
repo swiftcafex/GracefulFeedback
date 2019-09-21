@@ -1,15 +1,20 @@
+platform :ios, '9.0'
 use_frameworks!
 
 target 'GracefulFeedback_Example' do
-  pod 'GracefulFeedback', :path => '../'
+    
+    pod 'GracefulFeedback', :path => '../'
 
-  target 'GracefulFeedback_Tests' do
-    inherit! :search_paths
+    target 'GracefulFeedback_Tests' do
+        
+      inherit! :search_paths
 
-    pod 'Quick', '~> 1.2.0'
-  pod 'Nimble', '~> 7.0.2'
-  pod 'FBSnapshotTestCase' , '~> 2.1.4'
-  pod 'Nimble-Snapshots' , '~> 6.3.0'
-  pod 'UIColor_Hex_Swift'
-  end
+#      pod 'Quick', '~> 1.2.0'
+#      pod 'Nimble', '~> 7.0.2'
+#      pod 'FBSnapshotTestCase' , '~> 2.1.4'
+#      pod 'Nimble-Snapshots' , '~> 6.3.0'
+      pod 'UIColor_Hex_Swift', '~> 4.2.0'
+      
+    end
+    
 end
